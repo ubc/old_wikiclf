@@ -1,4 +1,33 @@
 
+
+/* ==== RESTRUCTURING ==== */
+div#mw-head {
+    position: static;
+    width: initial;
+    padding-left: 10em;
+    margin-bottom: -6px;
+}
+
+div#mw-head-inner {
+    display: inline-block;
+    margin-top: 2.5em;
+    width: 100%;
+    
+    background-image: url(images/border.png);
+    background-position: bottom left;
+    background-repeat: repeat-x;
+}
+
+#right-navigation {
+    margin-top: 0
+}
+
+#left-navigation {
+    position: static;
+}
+
+/* ==== MISC ==== */
+
 #mw-page-base {
     background-image: none;
 }
@@ -50,6 +79,11 @@ header.expand {
     padding: 0;
 }
 
+body.vector-animateLayout div#content,
+body.vector-animateLayout div#footer {
+    transition: none;
+}
+
 /* ==== BUTTONS ==== */
 
 #mw-prefs-buttons a {
@@ -84,7 +118,7 @@ select {
     font-size: 12.5px;
 }
 
-input:not(.btn):not([type="submit"]):not([type="radio"]) {
+.wikiclf-content input:not(.btn):not([type="submit"]):not([type="radio"]) {
     height: 16px;
     width: inherit;
     padding: 3px 4.5px;

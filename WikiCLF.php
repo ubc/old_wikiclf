@@ -70,6 +70,7 @@ class SkinWikiCLF extends SkinTemplate {
 		$out->addStyle( 'wikiclf/vector.css', 'screen' );
 		$out->addStyle( 'wikiclf/inputs.css', 'screen' );
 		$out->addStyle( 'wikiclf/wikiclf.css', 'screen' );
+		$out->addStyle( 'wikiclf/responsive.css', 'screen' );
 	}
 
 	/**
@@ -211,8 +212,42 @@ class WikiCLFTemplate extends BaseTemplate {
 		<!-- End of UBC Header -->
 		
 		<div class="wikiclf-content">
+			<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+				<div id="p-logo" class="hidden-phone">
+					<a style="background-image: url(<?php $this->text( 'logopath' ) ?>);" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>></a>
+				</div>
+				<!-- /logo -->
+				<div id="p-links">
+					<?php $this->renderPortals( $this->data['sidebar'] ); ?>
+				</div>
+			</div>
+			<!-- /panel -->
+			
+			<!-- header -->
+			<div id="mw-head" class="noprint">
+				<div class="visible-phone pull-right">
+					<?php $this->renderNavigation( array( 'SEARCH' ) ); ?>
+				</div>
+				<div id="mw-head-inner">
+					<div id="left-navigation">
+						<?php $this->renderNavigation( array( 'NAMESPACES', 'VARIANTS' ) ); ?>
+					</div>
+					<div id="right-navigation">
+						<?php $this->renderNavigation( array( 'VIEWS', 'ACTIONS' ) ); ?>
+						<span class="hidden-phone">
+							<?php $this->renderNavigation( array( 'SEARCH' ) ); ?>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!-- /header -->
+			
+			<!--
 			<div id="mw-page-base" class="noprint"></div>
 			<div id="mw-head-base" class="noprint"></div>
+			-->
 			
 			<!-- content -->
 			<div id="content" class="mw-body">
@@ -294,28 +329,6 @@ class WikiCLFTemplate extends BaseTemplate {
 				<!-- /bodyContent -->
 			</div>
 			<!-- /content -->
-			
-			<!-- header -->
-			<div id="mw-head" class="noprint">
-				<div id="left-navigation">
-					<?php $this->renderNavigation( array( 'NAMESPACES', 'VARIANTS' ) ); ?>
-				</div>
-				<div id="right-navigation">
-					<?php $this->renderNavigation( array( 'VIEWS', 'ACTIONS', 'SEARCH' ) ); ?>
-				</div>
-			</div>
-			<!-- /header -->
-			
-			<!-- panel -->
-				<div id="mw-panel" class="noprint">
-					<!-- logo -->
-					<div id="p-logo">
-						<a style="background-image: url(<?php $this->text( 'logopath' ) ?>);" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>></a>
-					</div>
-					<!-- /logo -->
-					<?php $this->renderPortals( $this->data['sidebar'] ); ?>
-				</div>
-			<!-- /panel -->
 			
 			<!-- footer -->
 			<div id="footer"<?php $this->html( 'userlangattributes' ) ?>>

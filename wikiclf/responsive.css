@@ -1,0 +1,84 @@
+@media (max-width: 979px) {
+    div#mw-head {
+        padding-left: 0;
+    }
+    
+    div#mw-head-inner {
+        margin-top: 0;
+    }
+    
+    div#mw-panel {
+        display: inline-block;
+        position: static;
+        width: 100%;
+    }
+    
+    div#mw-panel #p-logo {
+        float: left;
+    }
+    
+    div#mw-panel #p-links {
+        margin-left: 10em;
+    }
+    
+    div#mw-panel div.portal {
+        float: left;
+        width: 50%;
+        padding-bottom: 0;
+    }
+    
+    div#mw-panel div.portal h5 {
+        padding-left: 12px;
+    }
+    
+    div#mw-panel div.portal div.body {
+        margin-left: 0;
+    }
+    
+    div#mw-panel #p-logo {
+        position: static;
+    }
+    
+    div#footer,
+    div#content {
+        margin-left: 0;
+    }
+    
+    div#content {
+        background: none;
+    }
+    
+    div#mw-panel li > a {
+        width: 10em;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 12px;
+        padding-left: 12px;
+        float: left;
+        margin-top: -2px;
+        margin-bottom: -2px;
+    }
+    
+    div#mw-panel div.portal div.body ul li {
+        display: inline-block;
+        line-height: 1em;
+        padding: 0;
+    }
+    
+    div#mw-panel div.portal div.body ul li a:hover {
+        background-color: #2F5D7C;
+        color: #FFF;
+        text-decoration: none;
+        text-shadow: none;
+    }
+}
+
+@media (max-width: 767px) {
+    div#mw-panel #p-links {
+        margin-left: 0;
+    }
+    
+    div.vectorMenu ul {
+        right: 0;
+    }
+}
