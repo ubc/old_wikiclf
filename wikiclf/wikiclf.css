@@ -26,14 +26,34 @@ div#mw-head-inner {
     position: static;
 }
 
+div#mw-panel {
+    top: 40px;
+}
+
 /* ==== MISC ==== */
+
+body {
+    background: white;
+}
+
+header {
+    border-bottom: 1px solid #D7E0E7;
+}
 
 #mw-page-base {
     background-image: none;
 }
 
+#ubc7-header {
+    width: auto;
+}
+
 #p-search #searchform {
     margin-top: 0;
+}
+
+#p-cactions .menu {
+    z-index: 10;
 }
 
 .search-wrapper {
@@ -51,6 +71,12 @@ div#mw-head-inner {
 #simple-search button.rtl {
     right: auto;
     left: 0;
+}
+
+div#mw-panel li > a.feedlink {
+    width: 7.7em;
+    padding-left: 2.3em;
+    background-position-x: 1em;
 }
 
 .wikiclf-content {
@@ -75,13 +101,27 @@ footer.expand {
     margin: 0;
 }
 
-header.expand {
-    padding: 0;
-}
-
 body.vector-animateLayout div#content,
 body.vector-animateLayout div#footer {
     transition: none;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* ==== EDIT TOOLBAR ==== */
+
+.wikiclf-content .wikiEditor-ui-toolbar .section-main {
+    height: auto;
+}
+
+.wikiEditor-ui-toolbar .label {
+    text-shadow: none;
+    font-weight: normal;
+    background: none;
+    font-size: 13px;
+    padding: 0;
 }
 
 /* ==== BUTTONS ==== */
@@ -118,9 +158,8 @@ select {
     font-size: 12.5px;
 }
 
-.wikiclf-content input:not(.btn):not([type="submit"]):not([type="radio"]) {
+.wikiclf-content input:not(.btn):not([type="submit"]):not([type="radio"]):not([type="file"]) {
     height: 16px;
-    width: inherit;
     padding: 3px 4.5px;
     font-size: 13px;
     margin-bottom: 0;
@@ -305,3 +344,15 @@ label {
 #wiki-toolbar > ul > li:hover .dropdown-menu {
     display: block;    
 }
+
+/* ==== FLOATING TOOLBAR ==== */
+/*
+#wiki-toolbar {
+    position: fixed;
+    z-index: 10;
+}
+
+#wiki-toolbar-offset {
+    height: 27px;
+}
+*/

@@ -1,0 +1,38 @@
+
+.page-Main_Page h1.firstHeading {
+    display:none;
+}
+
+.page-Main_Page #bodyContent {
+    position: relative;
+    overflow: hidden;
+}
+
+#ubcclf-banner {
+    height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+
+#ubcclf-banner img {
+    position: absolute;
+    height: auto;
+	margin-top: -10%;
+}
+
+#ubcclf-intro {
+    background: #FFFFFF;
+    margin: 30px 0 0 30px;
+    opacity: 0.75;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    font-size: 110%;
+    width: 330px;
+}
+
+#ubcclf-intro h1 {
+	border: 0;
+	margin-bottom: 0;
+    padding-top: 0;
+}

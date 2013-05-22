@@ -17,10 +17,6 @@
         float: left;
     }
     
-    div#mw-panel #p-links {
-        margin-left: 10em;
-    }
-    
     div#mw-panel div.portal {
         float: left;
         width: 50%;
@@ -49,11 +45,11 @@
     }
     
     div#mw-panel li > a {
-        width: 10em;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        padding-right: 12px;
-        padding-left: 12px;
+        width: 9em;
+        padding-top: 0.66em;
+        padding-bottom: 0.66em;
+        padding-right: 1em;
+        padding-left: 1em;
         float: left;
         margin-top: -2px;
         margin-bottom: -2px;
@@ -81,4 +77,25 @@
     div.vectorMenu ul {
         right: 0;
     }
+    
+    div#content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    #ubcclf-banner {
+        height: auto;
+    }
+    
+    #ubcclf-banner img {
+        position: static;
+    }
+    
+    #ubcclf-intro {
+        padding: 0;
+        margin: 0;
+        width: auto;
+    }
 }
+
+/* ===== SPECIAL PAGE FIXES ===== */

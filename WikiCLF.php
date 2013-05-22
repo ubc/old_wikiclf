@@ -63,13 +63,14 @@ class SkinWikiCLF extends SkinTemplate {
 		
 		$out->addModules( 'skins.wikiclf' );
 		
-		$out->addStyle( 'http://cdn.ubc.ca/clf/7.0.3/css/ubc-clf-full.min.css', 'screen' );
+		$out->addStyle( 'http://cdn.ubc.ca/clf/7.0.3/css/ubc-clf-full-bw.min.css', 'screen' );
 		$out->addStyle( 'common/commonElements.css', 'screen' );
 		$out->addStyle( 'common/commonContent.css', 'screen' );
 		$out->addStyle( 'common/commonInterface.css', 'screen' );
 		$out->addStyle( 'wikiclf/vector.css', 'screen' );
 		$out->addStyle( 'wikiclf/inputs.css', 'screen' );
 		$out->addStyle( 'wikiclf/wikiclf.css', 'screen' );
+		$out->addStyle( 'wikiclf/mainpage.css', 'screen' );
 		$out->addStyle( 'wikiclf/responsive.css', 'screen' );
 	}
 
@@ -215,9 +216,11 @@ class WikiCLFTemplate extends BaseTemplate {
 			<!-- panel -->
 			<div id="mw-panel" class="noprint">
 				<!-- logo -->
+				<!--
 				<div id="p-logo" class="hidden-phone">
 					<a style="background-image: url(<?php $this->text( 'logopath' ) ?>);" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>></a>
 				</div>
+				-->
 				<!-- /logo -->
 				<div id="p-links">
 					<?php $this->renderPortals( $this->data['sidebar'] ); ?>
@@ -634,6 +637,7 @@ class WikiCLFTemplate extends BaseTemplate {
 						</ul>
 						<div style="clear:both"></div>
 					</div>
+					<div id="wiki-toolbar-offset"></div>
 					<?php
 					break;
 				case 'SEARCH':
