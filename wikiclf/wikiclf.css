@@ -73,12 +73,6 @@ header {
     left: 0;
 }
 
-div#mw-panel li > a.feedlink {
-    width: 7.7em;
-    padding-left: 2.3em;
-    background-position-x: 1em;
-}
-
 .wikiclf-content {
     position: relative;
     background: white;
@@ -197,6 +191,7 @@ select {
 /* ==== LABELS ==== */
 
 legend {
+    margin: 0;
     width: auto;
     border-bottom: none;
 }

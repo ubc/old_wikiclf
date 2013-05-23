@@ -67,6 +67,12 @@
         text-decoration: none;
         text-shadow: none;
     }
+
+    div#mw-panel li > a.feedlink {
+        width: 7.7em;
+        padding-left: 2.3em;
+        background-position-x: 1em;
+    }
 }
 
 @media (max-width: 767px) {
@@ -99,3 +105,12 @@
 }
 
 /* ===== SPECIAL PAGE FIXES ===== */
+
+table {
+    table-layout: fixed;
+    overflow: hidden;
+}
+
+.mw-contributions-form {
+    overflow: hidden;
+}
