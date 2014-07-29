@@ -62,12 +62,12 @@ class SkinWikiCLF extends SkinTemplate {
 		$out->addHeadItem( 'favicon-touch-57', '<link rel="apple-touch-icon-precomposed" href="http://cdn.ubc.ca/clf/7.0.3/img/apple-touch-icon-57-precomposed.png">') ;
 		
 		$out->addModules( 'skins.wikiclf' );
-		
-		$out->addStyle( 'http://cdn.ubc.ca/clf/7.0.3/css/ubc-clf-full-bw.min.css', 'screen' );
+		$out->addStyle( '//cdn.ubc.ca/clf/7.0.4/css/ubc-clf-full-bw.min.css', 'screen' );
 		$out->addStyle( 'common/commonElements.css', 'screen' );
 		$out->addStyle( 'common/commonContent.css', 'screen' );
 		$out->addStyle( 'common/commonInterface.css', 'screen' );
 		$out->addStyle( 'wikiclf/vector.css', 'screen' );
+		//$out->addStyle( 'wikiclf/reset.css', 'screen' );		
 		$out->addStyle( 'wikiclf/inputs.css', 'screen' );
 		$out->addStyle( 'wikiclf/wikiclf.css', 'screen' );
 		$out->addStyle( 'wikiclf/mainpage.css', 'screen' );
@@ -163,14 +163,13 @@ class WikiCLFTemplate extends BaseTemplate {
 		$this->html( 'headelement' );
 		?>
 		<!-- UBC Global Utility Menu -->
-		<?php $this->renderNavigation( 'PERSONAL' ); ?>
-		
+		<div class="full-width full-width-left">
 		<div class="collapse expand" id="ubc7-global-menu">
 			<div id="ubc7-search" class="expand">
-				<div class="container">
+				<div class="container" style="border-left: 1px solid #d7e0e7; border-right: 1px solid #d7e0e7; padding-left: 14px;padding-right: 14px;">
 					<div id="ubc7-search-box">
 						<form class="form-search" method="get" action="http://www.ubc.ca/search/refine/" role="search">
-							<input type="text" name="q" placeholder="Search this website" class="input-xlarge search-query">
+							<input type="text" name="q" placeholder="Search UBC websites" class="input-xlarge search-query">
 							<input type="hidden" name="label" value="Search UBC" />
 							<input type="hidden" name="site" value="wiki.ubc.ca" />
 							<button type="submit" class="btn">Search</button>
@@ -211,16 +210,88 @@ class WikiCLFTemplate extends BaseTemplate {
 			</div>
 		</header>
 		<!-- End of UBC Header -->
-		
+		<!-- UBC Unit Identifier -->
+	    <div id="ubc7-unit" class="row-fluid expand">
+	    	<div class="container">
+		        <div class="span12">
+		            <!-- Mobile Menu Icon -->
+		            <!-- <div class="navbar">
+		                <a class="btn btn-navbar" data-toggle="collapse" data-target="#ubc7-unit-navigation">
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </a>
+		            </div> -->
+		            <!-- Read more about Unit Name Treatment on http://brand.ubc.ca/clf -->
+		            <!-- No Faculty Treatment --><!--<div id="ubc7-unit-name" class="ubc7-single-element"> -->
+		            <div id="ubc7-unit-name" class="ubc7-single-element">
+		                <a href="/"><span id="ubc7-unit-faculty"></span><span id="ubc7-unit-identifier">UBC Wiki</span></a>
+		            </div>
+		        </div>
+			</div>
+	    </div>
+	    <!-- End of UBC Unit Identifier -->
+	<!-- UBC Unit Navigation
+    <div id="ubc7-unit-menu" class="navbar expand hidden-desktop" role="navigation">
+        <div class="navbar-inner expand">
+            <div class="container">
+                <div class="nav-collapse collapse" id="ubc7-unit-navigation">
+                    <ul class="nav">
+                        <li class="active"><a href="http://localhost:8888/mediawiki-1.23.1/index.php/Main_Page">Main Page</a></li>
+                        <li><a href="http://wiki.ubc.ca/UBC_Wiki:Create_a_New_Page">Create a New Page</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="http://localhost:8888/mediawiki-1.23.1/index.php/Special:RecentChanges">Recent Changes</a></li>
+                        <li><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">Help & Support</a></li>
+                        <li class="dropdown">
+                            <div class="btn-group">
+                                <a class="btn" href="http://www.ubc.ca/">Wiki Spaces</a>
+                                <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="ubc7-arrow blue down-arrow"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Main</a></li>
+                                    <li><a href="#">Courses</a></li>
+                                    <li><a href="#">Documentation</a></li>
+                                    <li><a href="#">Sandbox</a></li>
+                                    <li><a href="#">UBC Wiki Books</a></li>
+                                    <li><a href="#">Permanent Link</a></li>
+                                    <li><a href="#">Cite This Page</a></li>
+                                    <li><a href="#">Embed Page</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <div class="btn-group">
+                                <a class="btn" href="http://www.ubc.ca/">Tools</a>
+                                <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="ubc7-arrow blue down-arrow"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">What Links Here</a></li>
+                                    <li><a href="#">Related Changes</a></li>
+                                    <li><a href="#">Upload File</a></li>
+                                    <li><a href="#">Special Pages</a></li>
+                                    <li><a href="#">Printable Version</a></li>
+                                    <li><a href="#">Permanent Link</a></li>
+                                    <li><a href="#">Cite This Page</a></li>
+                                    <li><a href="#">Embed Page</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div> --><!-- /.nav-collapse -->
+            <!-- </div> -- >
+        <!-- </div> --> <!-- /navbar-inner -->
+    <!-- </div> --><!-- /navbar -->
+    <!-- End of UBC Unit Navigation -->
+    	</div><!-- End of Full Width -->
+
+		<?php $this->renderNavigation( 'PERSONAL' ); ?>
+
 		<div class="wikiclf-content">
 			<!-- panel -->
 			<div id="mw-panel" class="noprint">
-				<!-- logo -->
-				<!--
-				<div id="p-logo" class="hidden-phone">
+
+				<div id="p-logo">
 					<a style="background-image: url(<?php $this->text( 'logopath' ) ?>);" href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'p-logo' ) ) ?>></a>
 				</div>
-				-->
+
 				<!-- /logo -->
 				<div id="p-links">
 					<?php $this->renderPortals( $this->data['sidebar'] ); ?>
@@ -230,7 +301,7 @@ class WikiCLFTemplate extends BaseTemplate {
 			
 			<!-- header -->
 			<div id="mw-head" class="noprint">
-				<div class="visible-phone pull-right">
+				<div class="visible-phone">
 					<?php $this->renderNavigation( array( 'SEARCH' ) ); ?>
 				</div>
 				<div id="mw-head-inner">
@@ -605,9 +676,9 @@ class WikiCLFTemplate extends BaseTemplate {
 					?>
 					<div id="wiki-toolbar" class="<?php if ( count( $this->data['personal_urls'] ) == 0 ) echo ' emptyPortlet'; ?>">
 						<ul <?php $this->html( 'userlangattributes' ) ?>>
-							<li class="title">
+							<!-- <li class="title">
 								<a href="http://wiki.ubc.ca">UBC Wiki</a>
-							</li>
+							</li> -->
 							<?php
 								foreach( $this->getPersonalTools() as $key => $item ):
 									echo $this->makeListItem( $key, $item );
@@ -680,14 +751,14 @@ class WikiCLFTemplate extends BaseTemplate {
 											'id' => 'searchInput'
 										) );
 										
-										echo $this->makeSearchButton( 'go', array(
-											'id'    => 'searchGoButton',
-											'class' => 'searchButton btn',
-										) );
+										//echo $this->makeSearchButton( 'go', array(
+											//'id'    => 'searchGoButton',
+											//'class' => 'searchButton btn',
+										//) );
 										
 										echo $this->makeSearchButton( 'fulltext', array(
 											'id'    => 'mw-searchButton',
-											'class' => 'searchButton btn btn-primary',
+											'class' => 'searchButton hide-text',
 										) );
 									endif;
 								?>

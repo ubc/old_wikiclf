@@ -670,10 +670,10 @@ div#footer #footer-places li {
 div#content {
 	line-height: 1.5em;
 }
-#bodyContent {
+/* #bodyContent {
 	font-size: 0.8em;
 }
-
+*/
 .editsection {
 	float: right;
 }

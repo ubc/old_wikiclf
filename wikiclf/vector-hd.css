@@ -6,6 +6,7 @@ div#content {
 }
 #p-logo {
 	left: 0.5em;
+	position: relative;
 }
 div#footer {
 	margin-left: 11em;

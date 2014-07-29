@@ -1,26 +1,15 @@
 @media (max-width: 979px) {
-    div#mw-head {
-        padding-left: 0;
-    }
-    
-    div#mw-head-inner {
-        margin-top: 0;
-    }
-    
-    div#mw-panel {
-        display: inline-block;
-        position: static;
-        width: 100%;
+    body {
+        padding: 0 20px;
     }
     
     div#mw-panel #p-logo {
         float: left;
     }
-    
-    div#mw-panel div.portal {
-        float: left;
-        width: 50%;
-        padding-bottom: 0;
+    div#mw-panel #p-links {
+        margin-left: 0;
+        margin-top: 0;
+        float: right;
     }
     
     div#mw-panel div.portal h5 {
@@ -33,15 +22,6 @@
     
     div#mw-panel #p-logo {
         position: static;
-    }
-    
-    div#footer,
-    div#content {
-        margin-left: 0;
-    }
-    
-    div#content {
-        background: none;
     }
     
     div#mw-panel li > a {
@@ -73,20 +53,52 @@
         padding-left: 2.3em;
         background-position-x: 1em;
     }
+    #ubc7-footer.expand {
+        margin-top: 0 -20px
+    }
+    #wiki-toolbar {
+        padding: 0;
+        margin: 0 -20px;
+    }
 }
 
 @media (max-width: 767px) {
+    div#content {
+        background-image: none;
+    }
+    div#mw-panel #p-logo {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }  
+
     div#mw-panel #p-links {
         margin-left: 0;
     }
-    
+    div#mw-head {
+        padding-left: 0;
+    }
     div.vectorMenu ul {
         right: 0;
     }
-    
+        div#footer,
+        div#content {
+        margin-left: 0;
+    }
+        div#mw-panel {
+        display: inline-block;
+        position: static;
+        width: 100%;
+    }
     div#content {
         padding-left: 0;
         padding-right: 0;
+
+    }
+    div#mw-panel div.portal {
+        float: left;
+        width: 50%;
+        padding-bottom: 0;
     }
     
     #ubcclf-banner {
@@ -102,14 +114,23 @@
         margin: 0;
         width: auto;
     }
+    .wikiclf-content {
+        margin: 0;
+    }
+    #wiki-toolbar > ul {
+        float: left;
+        margin: 0 0 0 10px;
+    }
+    #wiki-toolbar > ul > li .btn-group > a, #wiki-toolbar > ul > li > a {
+        padding: 7px 5px;
+    }
+    #wiki-toolbar #pt-mytalk, #wiki-toolbar #pt-watchlist, #wiki-toolbar #pt-mycontris, #wiki-toolbar #pt-visit {
+        display: none;
+    }   
 }
 
 /* ===== SPECIAL PAGE FIXES ===== */
 
-table {
-    table-layout: fixed;
-    overflow: hidden;
-}
 
 .mw-contributions-form {
     overflow: hidden;
